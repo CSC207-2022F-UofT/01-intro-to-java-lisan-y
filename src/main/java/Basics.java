@@ -8,7 +8,7 @@
  */
 
 /**
- *  1. In Java, no code can exist outside of a class. Unlike Python which uses
+ *  1. In Java, no code can exist outside a class. Unlike Python which uses
  *    functions, all code in Java uses methods.
  *
  *    For this exercise, all of our code is within the Basics class.
@@ -38,13 +38,9 @@ public class Basics {
          *
          *    (Relevant reading: 1.1.3. Printing things)
          */
+
         System.out.println(7 + 5);
-
-        /* TODO (Task 1): Write a line of code below that prints the string
-         *                Hello World!
-         */
-
-
+        System.out.println("Hello World!");
 
         /* 4. In Python, we could declare variables using a simple assignment
          *    statement. For example:
@@ -58,12 +54,7 @@ public class Basics {
          *    (Relevant reading: 1.2. Variables and Types)
          */
 
-        /*
-         * TODO (Task 2): Create a variable named my_variable and assign it the
-         *                value 100.
-         */
-
-
+        int my_variable = 100;
 
         /* Do not remove the line below: if you did task 2 correctly, then
          * you should see the message "my_variable's value is 100" if you run
@@ -87,10 +78,11 @@ public class Basics {
          *    (Relevant reading: 1.8.2. for Loops)
          */
 
+        for (int i = 10; i >= 0; i--) {
+            System.out.println("Current count: " + i);
+        }
+
         /*
-         * TODO (Task 3): Create a for-loop that loops from 10 to 0, printing
-         *                the following at each iteration:
-         *                Current count: #
          *
          * e.g. the end result should look like:
          * Current count: 10
@@ -133,14 +125,13 @@ public class Basics {
      * @return           The first letter of every word in to_split
      */
     public static String split(String to_split) {
-        /* TODO (Task 4): Complete this method body.
-         *                The String methods .split and .charAt may be helpful,
-         *                along with the StringBuilder.append
-         *                You may also assume that to_split always has 7 words
-         *                separated by spaces, so no loops are required, though
-         *                you may use them if you wish.
-         */
+
         StringBuilder ret = new StringBuilder();
+        int numberOfWords = 7;
+        String[] wordList = to_split.split(to_split, numberOfWords);
+        for (int i = 0; i < 7; i++) {
+            ret.append(wordList[i].charAt(0));
+        }
 
         // Fill in the rest of the body here
 
