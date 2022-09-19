@@ -128,7 +128,7 @@ public class Basics {
 
         StringBuilder ret = new StringBuilder();
         int numberOfWords = 7;
-        String[] wordList = to_split.split(to_split, numberOfWords);
+        String[] wordList = to_split.split(" ", numberOfWords);
         for (int i = 0; i < 7; i++) {
             ret.append(wordList[i].charAt(0));
         }
